@@ -11,7 +11,7 @@ include_footer: true
 This page contains a set of frequently asked questions related to the {{<product-name>}}. If you cannot find an answer to a question you have consider creating a [Feature Request](https://github.com/microsoft/powercat-automation-kit/issues/new/choose) to update this page.
 
 Question groups in this page:
-{{< toc >}}
+{{<toc>}}
 
 ## Getting Started
 

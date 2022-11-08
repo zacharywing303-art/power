@@ -4,6 +4,7 @@ description: Automation Kit documentation authoring guidelines
 sidebar: false
 sidebarlogo: fresh-white
 include_footer: true
+
 ---
 
 The following sections outline guidelines and notes for authoring starter documentation.
@@ -80,13 +81,11 @@ Read the [Site Configuration](/contribution/site-configuration) for more informa
 - Each markdown file should include common header on each page
 
 ```toml
----
 title: Sample page
 description: Automation Kit sample page
 sidebar: false
 sidebarlogo: fresh-white
 include_footer: true
----
 ```
 
 - Markdown files should use shortcodes to embed any JavaScript
@@ -99,15 +98,19 @@ This project also includes additional shortcodes
 
 ### Table of Contents
 
-Add the following shortcode to your markdown to include a table of content of markdown headers in the page
+Add the **toc** following shortcode to your markdown to include a table of content of markdown headers in the page surrounded by \{\{ and \}\}
 
-{{\<toc\>}}
+```html
+<toc/>
+```
 
 ### Question
 
-Include a set of questions in your page
+Include a set of questions in your page surrounded by \{\{ and \}\}
 
-{{\<questions name="foo.json" completed="Thank you for completing foo" showNavigationButtons=false \>}}
+```html
+<questions name="foo.json" completed="Thank you for completing foo" showNavigationButtons=false />
+```
 
 Parameters:
 
@@ -117,9 +120,11 @@ Parameters:
 
 ### External Image
 
-Include a size image from an external source in your page
+Include a size image from an external source in your page surrounded by \{\{ and \}\}
 
-{{\<externalImage src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a7.png" size="16x16" text="Construction Icon"\>}}
+```html
+<externalImage src="https://github.githubassets.com/images/icons/emoji/unicode/1f6a7.png" size="16x16" text="Construction Icon"/>
+```
 
 Parameters:
 
