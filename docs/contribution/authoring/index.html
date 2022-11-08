@@ -253,13 +253,11 @@ by using our platform and frameworks. To the extent that we make it easy to get 
 <p>Each markdown file should include common header on each page</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">---</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#a6e22e">Sample</span> <span style="color:#a6e22e">page</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">title</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#a6e22e">Sample</span> <span style="color:#a6e22e">page</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">description</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#a6e22e">Automation</span> <span style="color:#a6e22e">Kit</span> <span style="color:#a6e22e">sample</span> <span style="color:#a6e22e">page</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">sidebar</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">false</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">sidebarlogo</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#a6e22e">fresh-white</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">include_footer</span><span style="color:#960050;background-color:#1e0010">:</span> <span style="color:#66d9ef">true</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">---</span>
 </span></span></code></pre></div><ul>
 <li>Markdown files should use shortcodes to embed any JavaScript</li>
 </ul>
@@ -267,21 +265,21 @@ by using our platform and frameworks. To the extent that we make it easy to get 
 <p>Short codes provide the ability to include dynamic content in a markdown page. You can read more about shortcodes from the <a href="https://gohugo.io/content-management/shortcodes/">Hugo shortcode documentation</a></p>
 <p>This project also includes additional shortcodes</p>
 <h3 id="table-of-contents">Table of Contents</h3>
-<p>Add the following shortcode to your markdown to include a table of content of markdown headers in the page</p>
-<p>{{&lt;toc&gt;}}</p>
-<h3 id="question">Question</h3>
-<p>Include a set of questions in your page</p>
-<p>{{&lt;questions name=&ldquo;foo.json&rdquo; completed=&ldquo;Thank you for completing foo&rdquo; showNavigationButtons=false &gt;}}</p>
-<p>Parameters:</p>
+<p>Add the <strong>toc</strong> following shortcode to your markdown to include a table of content of markdown headers in the page surrounded by {{ and }}</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">toc</span>/&gt;
+</span></span></code></pre></div><h3 id="question">Question</h3>
+<p>Include a set of questions in your page surrounded by {{ and }}</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">questions</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;foo.json&#34;</span> <span style="color:#a6e22e">completed</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Thank you for completing foo&#34;</span> <span style="color:#a6e22e">showNavigationButtons</span><span style="color:#f92672">=</span><span style="color:#e6db74">false</span> /&gt;
+</span></span></code></pre></div><p>Parameters:</p>
 <ul>
 <li><strong>name</strong> The name of the JSon file that includes questions to import. Read <a href="https://microsoft.github.io/powercat-automation-kit/contribution/questions">Questions</a> for more information on question file format</li>
 <li><strong>completed</strong> The text to display when the questions are completed</li>
 <li><strong>showNavigationButtons</strong> true/false value to shoe Next/Back/Completed navigation buttons</li>
 </ul>
 <h3 id="external-image">External Image</h3>
-<p>Include a size image from an external source in your page</p>
-<p>{{&lt;externalImage src=&ldquo;<a href="https://github.githubassets.com/images/icons/emoji/unicode/1f6a7.png%22">https://github.githubassets.com/images/icons/emoji/unicode/1f6a7.png&quot;</a> size=&ldquo;16x16&rdquo; text=&ldquo;Construction Icon&rdquo;&gt;}}</p>
-<p>Parameters:</p>
+<p>Include a size image from an external source in your page surrounded by {{ and }}</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">externalImage</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://github.githubassets.com/images/icons/emoji/unicode/1f6a7.png&#34;</span> <span style="color:#a6e22e">size</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;16x16&#34;</span> <span style="color:#a6e22e">text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Construction Icon&#34;</span>/&gt;
+</span></span></code></pre></div><p>Parameters:</p>
 <ul>
 <li><strong>src</strong> The source path to the image to import</li>
 <li><strong>size</strong> The size in pixels to resize the source image to</li>
