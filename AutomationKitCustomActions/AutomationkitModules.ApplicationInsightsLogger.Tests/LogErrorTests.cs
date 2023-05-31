@@ -20,7 +20,7 @@ namespace AutomationkitModules.ApplicationInsightsLogger.Tests
         {
             try
             {
-                LogError action = new LogError() { ConnectionString = "InstrumentationKey=cf31470d-2fc5-4ac1-97c1-a5e922138475;IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/", ErrorMessage="Test Error using Automation Kit Custom Actions"};
+                LogError action = new LogError() { ConnectionString = "InstrumentationKey=cf31470d-2fc5-4ac1-97c1-a5e922138475;IngestionEndpoint=https://eastus-8.in.applicationinsights.azure.com/;LiveEndpoint=https://eastus.livediagnostics.monitor.azure.com/", Message = "Test Error using Automation Kit Custom Actions"};
                 action.Execute(null);
                 var actionOutput = action.OutPutMessage;
             }
