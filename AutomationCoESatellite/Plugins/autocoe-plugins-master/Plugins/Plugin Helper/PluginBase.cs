@@ -76,7 +76,7 @@ namespace AutoCoE.Extensibility.Plugins.PluginHelper
             try
             {
                 // Invoke the custom implementation 
-                ExecuteCdsPlugin(localPluginContext);
+                ExecuteDataversePlugin(localPluginContext);
 
                 // now exit - if the derived plug-in has incorrectly registered overlapping event registrations,
                 // guard against multiple executions.
@@ -99,7 +99,7 @@ namespace AutoCoE.Extensibility.Plugins.PluginHelper
         /// Placeholder for a custom plug-in implementation. 
         /// </summary>
         /// <param name="localPluginContext">Context for the current plug-in.</param>
-        protected virtual void ExecuteCdsPlugin(ILocalPluginContext localPluginContext)
+        protected virtual void ExecuteDataversePlugin(ILocalPluginContext localPluginContext)
         {
             // Do nothing. 
         }
