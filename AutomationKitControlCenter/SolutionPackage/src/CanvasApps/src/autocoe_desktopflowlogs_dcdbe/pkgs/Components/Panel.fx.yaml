@@ -263,6 +263,7 @@ Panel As CanvasComponent:
                         HoverFillColor: =If(ThisItem.ButtonType = 'Spinner.Appearance'.Primary, ColorValue(Panel.Theme.palette.themeDark))
                         HoverTextColor: =
                         Italic: =false
+                        OnChange: =false
                         OnSelect: =Panel.OnButtonSelect()
                         PaddingBottom: =0
                         PaddingTop: =0
